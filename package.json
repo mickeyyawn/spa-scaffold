@@ -1,0 +1,29 @@
+{
+  "name": "spa-scaffold",
+  "version": "1.0.0",
+  "description": "starter template app for building a single page app",
+  "main": "server.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "NODE_ENV=DEV node server.js"
+  },
+  "keywords": [],
+  "author": "mickey yawn",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.3",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.16.4",
+    "helmet": "^3.9.0",
+    "request": "^2.83.0",
+    "winston": "^2.4.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "babel-loader": "^8.0.5",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3"
+  }
+}
