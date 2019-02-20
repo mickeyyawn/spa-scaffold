@@ -14,8 +14,6 @@ const app = new Vue({
 
 
 
-Vue.config.productionTip = false
-
 /* eslint-disable no-new */
 var vm = new Vue({
   el: '#app',
