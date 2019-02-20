@@ -4,7 +4,8 @@
   "description": "starter template app for building a single page app",
   "main": "server.js",
   "scripts": {
-    "build": "webpack --config webpack.config.js",
+    "dev": "webpack --mode development --config webpack.config.js --watch",
+    "build": "webpack --mode production --config webpack.config.js --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "NODE_ENV=DEV node server.js"
   },
@@ -18,11 +19,18 @@
     "express": "^4.16.4",
     "helmet": "^3.9.0",
     "request": "^2.83.0",
+    "vue": "^2.6.6",
+    "vue-router": "^3.0.2",
     "winston": "^2.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.3.3",
     "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.0",
+    "style-loader": "^0.23.1",
+    "vue-loader": "^15.6.4",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.6",
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3"
   }
