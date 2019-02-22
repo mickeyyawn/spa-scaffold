@@ -1,30 +1,49 @@
 <template>
 	<div id="app">
-		<h1>here i am</h1>
+        <Header/>
+        <!-- route outlet -->
+        <!-- component matched by the route will render here -->
+        <router-view></router-view>
+        <Footer/>
 	</div>
 </template>
 
 
 <script>
     console.log('in the app component...');
+
+    import Header from './components/Header.vue'
+    import Footer from './components/Footer.vue'
+
+    export default {
+        components: {
+            Header,
+            Footer
+        }
+    }
+
 </script>
 
 <style lang="css">
 
+    @import url("https://fonts.googleapis.com/css?family=Montserrat:200,300,400,700");
+
     #app {
-        max-width: 400px;
         margin: 0 auto;
         line-height: 1.4;
         font-family: 'Avenir', Helvetica, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         color: black;
-        background-color:Red;
-        width:200px;
+        width:700px;
     }
 
     h1 {
         text-align: center;
     }
+
+    a {
+  color: #42b983;
+}
 
 </style>
