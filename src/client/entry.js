@@ -13,8 +13,10 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import Contact from './components/Contact.vue'
 import About from './components/About.vue'
 import Home from './components/Home.vue'
+import NotFound from './components/NotFound.vue'
 
 const routes = [
+  { path: '*', component: NotFound},
   { path: '/', component: Home },
   { path: '/contact', component: Contact },
   { path: '/about', component: About }
@@ -24,6 +26,7 @@ const routes = [
 // You can pass in additional options here, but let's
 // keep it simple for now.
 const router = new VueRouter({
+  mode: 'history',
   routes // short for `routes: routes`
 })
 

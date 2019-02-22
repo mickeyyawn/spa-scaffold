@@ -3,9 +3,9 @@
         <span>
             <span class='logo'>THE COMPANY</span>
             <span style='float:right'>
-                <router-link to="/" class='header-link'>Home</router-link>
-                <router-link to="/about" class='header-link'>About</router-link>
-                <router-link to="/contact" class='header-link'>Contact</router-link>
+                <router-link to="/" class='header-link'>HOME</router-link>
+                <router-link to="/about" class='header-link'>ABOUT</router-link>
+                <router-link to="/contact" class='header-link'>CONTACT</router-link>
             </span>
         </span>
         <br>
@@ -34,7 +34,8 @@
   .header-link {
       
       margin-left:20px;
-      font-size:1.2em;
+      font-size:1.0em;
+      font-weight: bold;
       text-decoration: none;
       outline: none !important;
   }

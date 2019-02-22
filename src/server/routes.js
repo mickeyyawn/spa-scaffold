@@ -8,7 +8,8 @@ let indexPage = null;
 
 //TODO:  make sure you have health check best practices in Here
 const healthCheck = function(req, res, next){
-  res.status(200).json(app.locals.info);
+  //res.status(200).json(app.locals.info);
+  res.status(200).json({status:"ok"});
 }
 
 const returnIndexPage = function(req, res, next){
@@ -27,6 +28,12 @@ const resolve = (app) => {
   indexPage = fs.readFileSync(app.locals.info.rootPath + '/' + 'index.html', 'utf8');
   app.get('/', returnIndexPage);
   app.get('/api/hc', healthCheck);
+  // 
+  // if we fall through and have not processed a route, then
+  // return the index page. this is the equivalent of returning
+  // 404. in a single page app we want to process the 404 on the client side...
+  //
+  app.get('*', returnIndexPage);
 }
 
 module.exports.resolve = resolve;
